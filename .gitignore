@@ -42,7 +42,4 @@ bin/
 .DS_Store
 *.jar
 *.properties
-*.kts
-*.bat
-gradlew
 *.xml
