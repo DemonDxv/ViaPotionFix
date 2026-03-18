@@ -29,10 +29,7 @@ public class PotionFix extends JavaPlugin implements Listener {
     public void onEnable() {
         PacketEvents.getAPI().getEventManager().registerListener(new PacketHook());
         PacketEvents.getAPI().init();
-
         Bukkit.getPluginManager().registerEvents(this, this);
-
-        getLogger().info("ViaPotionFix is now enabled!");
     }
 
     @Override

@@ -2,7 +2,6 @@ package dev.demon.potionfix.user;
 
 import com.github.retrooper.packetevents.PacketEvents;
 import com.github.retrooper.packetevents.protocol.player.ClientVersion;
-import dev.demon.potionfix.PotionFix;
 import lombok.Getter;
 import org.bukkit.entity.Player;
 
