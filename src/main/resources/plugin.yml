@@ -1,0 +1,8 @@
+name: ViaPotionFix
+version: 1.0.0
+main: dev.demon.potionfix.PotionFix
+api-version: 1.13
+depend:
+  - packetevents
+author: demonpvp
+description: Fixes potion effects not applying for 1.20.5+ clients on 1.8.9 servers.
