@@ -12,7 +12,7 @@ So I went out of my way, and fixed it and released this here on GitHub for anyon
 In Modern Versions of Minecraft, Mojang completely overhauled how items work, moving from NBT tags to Data Components and etc..
 When **ViaVersion** translates these modern items backward through 10+ years of updates, it tries its best, but a critical issue occurs
 ### The Ghost NBT Bug: 
-When players pull potions from the Creative menu, ViaVersion assigns the correct 1.8.8 damage value but accidentally attaches an empty CustomPotionEffects=List([]) NBT tag. The 1.8.8 server prioritizes NBT over damage values, sees a list of zero effects, and literally applies zero effects to the player.
+When players pull potions from the Creative menu, ViaVersion assigns the correct 1.8.9 damage value but accidentally attaches an empty CustomPotionEffects=List([]) NBT tag. The 1.8.9 server prioritizes NBT over damage values, sees a list of zero effects, and literally applies zero effects to the player.
 
 ## The Solution
 **ViaPotionFix** corrects these translation gaps at the packet level using **PacketEvents**, completely bypassing the Bukkit API to ensure zero conflict with anticheats or custom plugins.
