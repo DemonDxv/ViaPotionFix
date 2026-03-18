@@ -15,9 +15,9 @@ When **ViaVersion** translates these modern items backward through 10+ years of 
 When players pull potions from the Creative menu, ViaVersion assigns the correct 1.8.9 damage value but accidentally attaches an empty CustomPotionEffects=List([]) NBT tag. The 1.8.9 server prioritizes NBT over damage values, sees a list of zero effects, and literally applies zero effects to the player.
 
 ## The Solution
-**ViaPotionFix** corrects these translation gaps at the packet level using **PacketEvents**, completely bypassing the Bukkit API to ensure zero conflict with anticheats or custom plugins.
+[**ViaPotionFix**](https://github.com/DemonDxv/ViaPotionFix/releases/tag/Release) corrects these translation gaps at the packet level using **PacketEvents**, completely bypassing the Bukkit API to ensure zero conflict with anticheats or custom plugins.
 Using **PacketEvents**, we intercept ``CREATIVE_INVENTORY_ACTION`` and ``PLAYER_BLOCK_PLACEMENT`` packets, and if a potion contains the corrupted **ViaVersion** ghost tag, it is completely deleted out before the server processes it.
 
 ## Requirements
 To run this plugin, your server must have the following dependencies installed:
-* PacketEvents: 2.11.x *(Used for packet interception)*
+* [PacketEvents: 2.11.x](https://github.com/retrooper/packetevents/) *(Used for packet interception)*
