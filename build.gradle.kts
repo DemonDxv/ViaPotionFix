@@ -8,9 +8,7 @@ version = "1.0-RELEASE"
 repositories {
     mavenLocal()
     mavenCentral()
-
-    maven("https://repo.viaversion.com")
-
+    
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
     maven("https://oss.sonatype.org/content/repositories/snapshots/")
 
@@ -21,10 +19,7 @@ repositories {
 dependencies {
     // using Spigot 1.8.8's API for reference
     compileOnly("org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT")
-
     compileOnly("com.github.retrooper:packetevents-spigot:2.11.2")
-    compileOnly("com.viaversion:viaversion-api:4.0.0")
-
     compileOnly("org.projectlombok:lombok:1.18.32")
     annotationProcessor("org.projectlombok:lombok:1.18.32")
 }
